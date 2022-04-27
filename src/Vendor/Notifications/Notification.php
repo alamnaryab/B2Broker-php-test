@@ -1,6 +1,6 @@
 <?php
 namespace src\Vendor\Notifications;
-use \src\BankLib\Account;
+use \src\BankLibs\Account;
 
 class Notification{
 

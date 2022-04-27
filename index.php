@@ -1,14 +1,30 @@
 <?php
+    //**Requiring dependent classed one by one commented because below spl_autoload_register autoloading it */
+    // require_once 'src/Banklibs/Account.php';
+    // require_once 'src/Banklibs/Transaction.php';
+    
+    //autolod dependent classes
+    spl_autoload_register(function ($class) {
+        require_once   str_replace('/','\\',$class) . '.php';
+    });
+    
+    //we will be using below classes in this page
+    use src\BankLibs\Account;
+    use src\BankLibs\Transaction;
+    
+    //load dummy Data
     require_once 'src/DummyData.php';
-    require_once 'src/Banklibs/Account.php';
-    require_once 'src/Banklibs/Transaction.php';
-
-    use src\BankLib\Account;
-    use src\BankLib\Transaction;
-
+    
+    //create account and transaction objects
     $accountObj = new Account();
     $transactionObj = new Transaction();
     
+    /***
+     * Below are 10 function please uncomment one by one along with debug(response)
+     * and see output in browser
+    */
+
+
     ///***************get all accounts****************************************/
     ///*methos(params) = getAllAccounts()*/
     $response = $accountObj->getAllAccounts();
@@ -69,6 +85,10 @@
     }
     
 ?>
+
+
+
+
 
 <div style="
     background:#111;

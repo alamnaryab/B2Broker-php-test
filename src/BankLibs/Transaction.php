@@ -1,5 +1,5 @@
 <?php
-namespace src\BankLib;
+namespace src\BankLibs;
 
 require_once 'src/Vendor/Notifications/Notification.php';
 use src\Vendor\Notifications\Notification as NotificationAlias;  

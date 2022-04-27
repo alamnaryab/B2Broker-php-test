@@ -1,6 +1,6 @@
 <?php
 
-namespace src\BankLib;
+namespace src\BankLibs;
 
 class Account{
 
@@ -12,7 +12,7 @@ class Account{
             'message'=>'Account class object created',
             'data'=>null,
         ];
-        global $DB_accounts;
+        global $DB_accounts; 
         global $DB_transactions;
         $this->DB = (object)['accounts'=>$DB_accounts,'transactions'=>$DB_transactions];
     }//end __construct
