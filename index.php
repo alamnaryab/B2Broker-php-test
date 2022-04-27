@@ -68,17 +68,17 @@
 
     ///***************Make withdraw transaction****************************************/
     ///*methos(params) = withdraw(accountNumber, amount,comments)*/
-    // $withdrawResponse = $transactionObj->withdraw(2,100.99,'Manual Deposit');
+    // $withdrawResponse = $transactionObj->withdraw(2,100.99,'Manual withdraw');
     // debug($withdrawResponse);
 
     ///***************Make withdraw transaction with amount more than account balance****************************/
     ///*methos(params) = withdraw(accountNumber, bigger_amount,comments)*/
-    // $withdraw2Response = $transactionObj->withdraw(2,9999.99,'Manual Deposit');
+    // $withdraw2Response = $transactionObj->withdraw(2,9999.99,'Manual withdraw');
     // debug($withdraw2Response);
 
     ///***************Make withdraw transaction****************************************/
     ///*methos(params) = withdraw(accountNumber, amount,beneficiaryAccountNumber,comments)*/
-    // $transferResponse = $transactionObj->transfer(2,100.99,1,'Manual Deposit');
+    // $transferResponse = $transactionObj->transfer(2,100.99,1,'Manual transfer');
     // debug($transferResponse);
 
 
@@ -127,13 +127,13 @@
         $depositResponse = $transactionObj->deposit(2,100.99,'Manual Deposit');
         debug($depositResponse);
         
-        $withdrawResponse = $transactionObj->withdraw(2,100.99,'Manual Deposit');
+        $withdrawResponse = $transactionObj->withdraw(2,100.99,'Manual withdraw');
         debug($withdrawResponse);
 
-        $withdraw2Response = $transactionObj->withdraw(2,9999.99,'Manual Deposit');
+        $withdraw2Response = $transactionObj->withdraw(2,9999.99,'Manual withdraw');
         debug($withdraw2Response);
         
-        $transferResponse = $transactionObj->transfer(2,100.99,1,'Manual Deposit');
+        $transferResponse = $transactionObj->transfer(2,100.99,1,'Manual transfer');
         debug($transferResponse);
     </pre>
 </div>
