@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace src\BankLibs;
 
 require_once 'src/Vendor/Notifications/Notification.php';
@@ -25,7 +26,7 @@ class Transaction{
 
 
 
-    public function deposit($accountNumber, $amount,$comments=''){
+    public function deposit($accountNumber, $amount,$comments=''):array{
         try{
             //validate if accountnumber is an active account by calling isActiveAccount() from Account Calss
             
@@ -70,7 +71,7 @@ class Transaction{
 
 
 
-    public function withdraw($accountNumber, $amount,$comments){
+    public function withdraw($accountNumber, $amount,$comments):array{
         try{
             //validate if accountnumber is an active account by calling isActiveAccount() from Account Calss
             
@@ -123,7 +124,7 @@ class Transaction{
         }
     }//end withdraw()
 
-    public function transfer($accountNumber, $amount,$beneficiaryAccountNumber,$comments){
+    public function transfer($accountNumber, $amount,$beneficiaryAccountNumber,$comments):array{
 
         try{
             //validate if account and beneficiaryAccountNumber is same

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace src\Vendor\Notifications;
 use \src\BankLibs\Account;
 
@@ -11,7 +12,7 @@ class Notification{
         $this->nottifications=[];
     }//end __construct()
 
-    public function send($trx){
+    public function send($trx):array{
         //\debug($trx);
         if($trx['transactionType']=='transfer'){
             //send notifications to sender
