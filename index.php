@@ -27,8 +27,8 @@
 
     ///***************get all accounts****************************************/
     ///*methos(params) = getAllAccounts()*/
-    $response = $accountObj->getAllAccounts();
-    debug($response);
+    // $response = $accountObj->getAllAccounts();
+    // debug($response);
 
     ///***************get account# 1 or 2 detail****************************************/
     ///*methos(params) = getAccountBalance(accountNumber)*/
@@ -71,6 +71,11 @@
     // $withdrawResponse = $transactionObj->withdraw(2,100.99,'Manual Deposit');
     // debug($withdrawResponse);
 
+    ///***************Make withdraw transaction with amount more than account balance****************************/
+    ///*methos(params) = withdraw(accountNumber, bigger_amount,comments)*/
+    $withdraw2Response = $transactionObj->withdraw(2,9999.99,'Manual Deposit');
+    debug($withdraw2Response);
+
     ///***************Make withdraw transaction****************************************/
     ///*methos(params) = withdraw(accountNumber, amount,beneficiaryAccountNumber,comments)*/
     // $transferResponse = $transactionObj->transfer(2,100.99,1,'Manual Deposit');
@@ -96,7 +101,7 @@
     padding:15px;
 
 ">
-    <h3>Below are 10 function in /index.php, uncommment each function and its response to see result.</h3>
+    <h3>Below are some function in /index.php, uncommment each function and its response to see result.</h3>
     <pre>
         $response = $accountObj->getAllAccounts();
         debug($response);
@@ -124,6 +129,9 @@
         
         $withdrawResponse = $transactionObj->withdraw(2,100.99,'Manual Deposit');
         debug($withdrawResponse);
+
+        $withdraw2Response = $transactionObj->withdraw(2,9999.99,'Manual Deposit');
+        debug($withdraw2Response);
         
         $transferResponse = $transactionObj->transfer(2,100.99,1,'Manual Deposit');
         debug($transferResponse);

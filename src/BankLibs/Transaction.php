@@ -85,7 +85,7 @@ class Transaction{
             if(count($accountBalanceAmount['data'])>0){
                 $accountBalanceAmount = reset($accountBalanceAmount['data']);
                 if($accountBalanceAmount['balance'] < $amount){
-                    throw new \Exception("Account# {$accountNumber} has not enough balance to withdraw.");
+                    throw new \Exception("Account# {$accountNumber} has not enough balance to withdraw AED {$amount}.");
                 }
             }
             
